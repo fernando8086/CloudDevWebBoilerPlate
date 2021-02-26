@@ -12,9 +12,9 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'web'
+    SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    TargetFolder: 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
